@@ -43,7 +43,7 @@ namespace GameFromFramework
         static void CustomWeaponExperiment() 
         {
             SwordCreator SCreate = new SwordCreator();
-            wman.Add(SCreate.CreateWeapon(name: "Excalibur", damage: 55, durability: 55, accuracy: 150, critical: 20));
+            wman.Add(SCreate.CreateWeapon(name: "Excalibur", description: "A holy sword.", damage: 55, durability: 55, accuracy: 150, critical: 20));
             MyrmidonPos.GA.AddInventoryItem(wman.Find(6));
             Console.WriteLine(MyrmidonPos.GA.EquippedWeapon);
         }

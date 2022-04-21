@@ -13,11 +13,8 @@ namespace GameFrameWork.Creatures
     {
         public override void Add(CharacterAndPosition item) 
         {
-            foreach (CharacterAndPosition Character in Returnlist())
-            {
-                if (item.PosX == Character.PosX && item.PosY == Character.PosY) { return; }
-            }
-            base.internalList.Add(item);
+            bool has = Returnlist().Any(x => x.PosX == item.PosX && x.PosY == item.PosY);
+            if (!has) { base.internalList.Add(item); }
         }
     }
 }

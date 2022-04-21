@@ -40,25 +40,5 @@ namespace GameFrameWork.Generic
         {
             return Returnlist()[i];
         }
-        
-        /*
-        /// <summary>
-        /// I stole this function from the internet, to help me make deep copies of items in the managers, instead of just copying them over (doesn't work so good with durability, durability decreases for 1 character's weapon will affect other weapons of the same type.)
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="item"></param>
-        /// <returns></returns>
-        public T Find(int i)
-        {
-            T item = Returnlist()[i];
-            BinaryFormatter formatter = new BinaryFormatter();
-            MemoryStream stream = new MemoryStream();
-            formatter.Serialize(stream, item);
-            stream.Seek(0, SeekOrigin.Begin);
-            T result = (T)formatter.Deserialize(stream);
-            stream.Close();
-            return result;
-        }
-        */
     }
 }
